@@ -1,0 +1,51 @@
+Timestamp(Standard),CH0:Temperature(degC),CH1:Depth(dbar)
+2022-06-22 12:24:29,26.765,0.382
+2022-06-22 12:25:29,26.800,0.357
+2022-06-22 12:26:29,26.803,0.344
+2022-06-22 12:27:29,26.830,0.311
+2022-06-22 12:28:29,26.811,0.300
+2022-06-22 12:29:28,26.841,0.295
+2022-06-22 12:30:28,26.844,0.266
+
+# <WISENS>
+# 	<SENSOR eH0="WiSens TD 1000m" eH1="Data Logger" eH2="0x5307" eH3="1.1.17" eH4="2"/>
+# 	<COMMENT eX0="NKE_WiSens_TD1000_5307"/>
+# 	<STATUS eS0="7.5 %" eS1="91.9 %" eS2="LSH14 light"/>
+# 	<CHANNEL_7 eC0="Temperature" eC1="degC" eC2=".3f" eC3="50" eC4="100">
+# 		<CALIBRATION>
+# 			<TYPE eT0="Bennett" eC0="3.61480919e-03" eC1="2.62135037e-04" eC2="2.71687777e-06" eC3="1.12132875e-07"/>
+# 			<POINT_1 eP0="34.8156" eP1="24113.0"/>
+# 			<POINT_2 eP0="29.8369" eP1="29711.0"/>
+# 			<POINT_3 eP0="24.9131" eP1="36747.0"/>
+# 			<POINT_4 eP0="20.0265" eP1="45659.0"/>
+# 			<POINT_5 eP0="15.1455" eP1="57081.0"/>
+# 			<POINT_6 eP0="10.2032" eP1="72048.0"/>
+# 			<POINT_7 eP0="5.1135" eP1="92263.0"/>
+# 		</CALIBRATION>
+# 	</CHANNEL_7>
+# 	<CHANNEL_4 eC0="Depth" eC1="dbar" eC2=".3f" eC3="50" eC4="100">
+# 		<CALIBRATION>
+# 			<TYPE eT0="Multipoint"/>
+# 			<POINT_1 eP0="3.8940" eP1="4864.0"/>
+# 			<POINT_2 eP0="49.8460" eP1="8960.0"/>
+# 			<POINT_3 eP0="102.1700" eP1="13676.0"/>
+# 			<POINT_4 eP0="151.5110" eP1="18140.0"/>
+# 			<POINT_5 eP0="201.4120" eP1="22646.0"/>
+# 			<POINT_6 eP0="301.4870" eP1="31682.0"/>
+# 			<POINT_7 eP0="401.3020" eP1="40702.0"/>
+# 			<POINT_8 eP0="500.9930" eP1="49698.0"/>
+# 			<POINT_9 eP0="600.7160" eP1="58702.0"/>
+# 			<POINT_10 eP0="700.9430" eP1="67746.0"/>
+# 			<POINT_11 eP0="801.7920" eP1="76853.0"/>
+# 			<POINT_12 eP0="899.9120" eP1="85703.0"/>
+# 			<POINT_13 eP0="999.6440" eP1="94698.0"/>
+# 		</CALIBRATION>
+# 	</CHANNEL_4>
+# 	<MEASURE>
+# 		<SAMPLING eS0="Continuous"/>
+# 		<START eS0="Manual"/>
+# 		<STOP eS0="Manual"/>
+# 	</MEASURE>
+# 	<EXPORT eX0="Standard (yyyy-mm-dd hh:mm:ss)" eX1="." eX2=","/>
+# 	<DATA eD0="1 min" eD1="2022-06-22T12:23:26" eD2="2022-06-22T12:31:39" eD3="7"/>
+# </WISENS>

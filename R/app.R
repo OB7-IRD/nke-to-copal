@@ -4,7 +4,7 @@ library(shinythemes)
 # Define UI for data upload app ----
 ui <- fluidPage(
   
-  # Theme
+  # Theme ----
   theme = shinytheme("united"),
   
   # App title ----

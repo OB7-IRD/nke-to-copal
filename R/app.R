@@ -1,7 +1,11 @@
 library(shiny)
+library(shinythemes)
 
 # Define UI for data upload app ----
 ui <- fluidPage(
+  
+  # Theme
+  theme = shinytheme("united"),
   
   # App title ----
   titlePanel("NKE WiSense TD output file to COPAL readable file"),
@@ -56,6 +60,9 @@ ui <- fluidPage(
     
     # Main panel for displaying outputs ----
     mainPanel(
+      
+      # Horizontal line ----
+      tags$hr(),
       
       # Download data ----
       h4("Table"),

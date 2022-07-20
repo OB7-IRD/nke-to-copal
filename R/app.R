@@ -8,7 +8,7 @@ ui <- fluidPage(
   theme = shinytheme("united"),
   
   # App title ----
-  titlePanel("NKE WiSense TD output file to COPAL readable file"),
+  titlePanel("NKE WiSens TD output file to COPAL readable file"),
   
   # Sidebar layout with input and output definitions ----
   sidebarLayout(

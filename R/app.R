@@ -93,19 +93,18 @@ server <- function(input, output) {
     df0 <- read.csv(input$file1$datapath,
                     header = T,
                     sep = ",",
-                    quote = "",
+                    quote = ""
     )
     # Remove metadata ----
     df1 <- df0[substr(df0[,1], 1, 1) != "#",] 
     # Add columns ----
-    df1$Temper <- round(as.numeric(df1$CH0.Temperature.degC.), digits = 2)
-    df1$Depth <- round(as.numeric(df1$CH1.Depth.dbar.), digits = 2)
+    df1$Temper <- round(as.numeric(df1$CH0.Temperature.degC.), digits = 3)
+    df1$Depth <- round(as.numeric(df1$CH1.Depth.dbar.), digits = 3)
     df1$TimeStamp <- as.POSIXct(df1$Timestamp.Standard., format = "%Y-%m-%d %H:%M:%S")
     df1$Date <- paste(substr(df1$TimeStamp, 9, 10), substr(df1$TimeStamp, 6, 7), substr(df1$TimeStamp, 1, 4), sep="/")
     df1$Time <- substr(df1$TimeStamp, 12, 20)
     # Return df -----
     return(df1)
-    
   }
   
   # Stage 2 function ----
@@ -120,7 +119,7 @@ server <- function(input, output) {
     
     # input$file1 will be NULL initially
     req(input$file1)
-
+    
     # Run stage 1 ----
     df1 <- stage1(input)
     
@@ -156,8 +155,13 @@ server <- function(input, output) {
       # Run stage 2 ----
       df2 <- stage2(df1)
       
+      # Fix 3 decimals ----
+      df3 <- df2
+      df3$Temper <- sprintf(df3$Temper, fmt = '%#.3f')
+      df3$Depth <- sprintf(df3$Depth, fmt = '%#.3f')
+      
       # Write table ----
-      write.table(df2, file, row.names = FALSE, sep = "\t", dec = ".", quote = F)
+      write.table(df3, file, row.names = FALSE, sep = "\t", dec = ".", quote = F)
       
     }
     
